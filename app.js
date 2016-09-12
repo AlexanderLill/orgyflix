@@ -5,7 +5,15 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var mongoose = require('mongoose');
+require('./models/Invitation.js');
+require('./models/User.js');
+require('./models/Movie.js');
+require('./models/Event.js');
+mongoose.connect('mongodb://localhost/orgyflix');
+
 var routes = require('./routes/index');
+var events = require('./routes/events');
 var users = require('./routes/users');
 
 var app = express();
@@ -23,6 +31,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
+app.use('/events', events);
 app.use('/users', users);
 
 // catch 404 and forward to error handler
