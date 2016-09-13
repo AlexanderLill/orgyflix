@@ -4,5 +4,6 @@ import { Component } from '@angular/core';
     selector: 'as-overview',
     templateUrl: 'app/overview/overview.html',
 })
+
 export class OverviewComponent {
 }
