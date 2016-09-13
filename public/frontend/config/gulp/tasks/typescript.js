@@ -44,7 +44,7 @@ function lintTs(files) {
         .pipe(tslint({
             formatter: 'verbose'
         }))
-        .pipe(tslint.report());
+        //.pipe(tslint.report());
 }
 
 function compileTs(files, watchMode) {
@@ -60,7 +60,7 @@ function compileTs(files, watchMode) {
         .pipe(tslint({
             formatter: 'verbose'
         }))
-        .pipe(tslint.report())
+       // .pipe(tslint.report())
         .pipe(sourcemaps.init())
         .pipe(ts(tsProject))
         .on('error', function () {

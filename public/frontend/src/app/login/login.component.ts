@@ -1,15 +1,18 @@
 import { Component } from '@angular/core';
-import { Router } from "@angular/router";
+import { User } from './user.model';
+import { Router } from '@angular/router';
+
 
 @Component({
     selector: 'as-login',
     templateUrl: 'app/login/login.html',
 })
 export class LoginComponent {
+    public user: User       = new User('', '');
+    public errorMsg: String = '';
 
-    constructor(public user = new User('', ''),
-                public errorMsg = '',
-                private router: Router ) {}
+    constructor(private router: Router) {
+    }
 
     login() {
         if (!this.user.username || !this.user.password) {
@@ -21,8 +24,3 @@ export class LoginComponent {
     }
 }
 
-export class User {
-    constructor(
-        public username: string,
-        public password: string) { }
-}
