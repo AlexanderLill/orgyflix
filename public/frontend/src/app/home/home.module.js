@@ -10,13 +10,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var index_1 = require('./index');
+var login_component_1 = require('../login/login.component');
 var HomeModule = (function () {
     function HomeModule() {
     }
     HomeModule = __decorate([
         core_1.NgModule({
             declarations: [
-                index_1.HomeComponent
+                index_1.HomeComponent,
+                login_component_1.LoginComponent
             ],
             exports: [
                 index_1.HomeComponent
