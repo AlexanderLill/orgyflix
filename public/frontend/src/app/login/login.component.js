@@ -11,8 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var LoginComponent = (function () {
     function LoginComponent() {
-        this.user = new User('', '');
-        this.errorMsg = '';
     }
     LoginComponent = __decorate([
         core_1.Component({
@@ -24,15 +22,4 @@ var LoginComponent = (function () {
     return LoginComponent;
 }());
 exports.LoginComponent = LoginComponent;
-var User = (function () {
-    function User(username, password) {
-        this.username = username;
-        this.password = password;
-    }
-    User.prototype.login = function (user) {
-        return "hello";
-    };
-    return User;
-}());
-exports.User = User;
 //# sourceMappingURL=login.component.js.map

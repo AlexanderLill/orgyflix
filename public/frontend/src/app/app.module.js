@@ -12,8 +12,6 @@ var core_1 = require('@angular/core');
 var app_providers_1 = require('./app.providers');
 var app_component_1 = require('./app.component');
 var app_routing_1 = require('./app.routing');
-var forms_1 = require('@angular/forms');
-var platform_browser_1 = require('@angular/platform-browser');
 var shared_1 = require('./shared');
 var home_module_1 = require('./home/home.module');
 var overview_module_1 = require('./overview/overview.module');
@@ -27,8 +25,6 @@ var AppModule = (function () {
                 app_component_1.AppComponent
             ],
             imports: [
-                platform_browser_1.BrowserModule,
-                forms_1.FormsModule,
                 shared_1.NavbarModule,
                 home_module_1.HomeModule,
                 overview_module_1.OverviewModule,
