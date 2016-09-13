@@ -1,8 +1,107 @@
-<div class="panel panel-default">
+<div class="btn-group pull-right" role="group" aria-label="...">
+    <button type="button" class="btn btn-default"><i class="fa fa-plus"></i></button>
+    <button (click)="toggleSidebar()" type="button" class="btn btn-default"><i class="fa fa-filter"></i></button>
+</div>
+
+<br><br>
+
+<div [hidden]="sidebarHidden" class="panel panel-default pull-right">
     <div class="panel-heading">
-        <h3 class="panel-title"><i class="fa fa-home"></i>Overview</h3>
+        <div class="panel-title pull-left">
+            Filtering
+        </div>
+        <div class="clearfix"></div>
     </div>
+
     <div class="panel-body">
-        <h4>Our events will be shown here</h4>
+
+        <div class="row list-group">
+            <form class="navbar-form navbar-fill" role="search">
+                <div class="form-group">
+                    <i class="fa fa-globe"></i><input type="text" class="form-control" placeholder="Location">
+                </div>
+            </form>
+        </div>
+
+        <div class="row">
+
+            <label><i class="fa fa-tags"></i></label>
+
+            <div class="btn-group" data-toggle="buttons">
+
+                <label class="btn btn-secondary active">
+                    <input type="checkbox" autocomplete="off"> Movies
+                </label>
+                <label class="btn btn-secondary active">
+                    <input type="checkbox" autocomplete="off"> Series
+                </label>
+                <label class="btn btn-secondary active">
+                    <input type="checkbox" autocomplete="off"> Cinema
+                </label>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div id="list1" class="dropdown" tabindex="100">
+                <button class="btn btn-default dropdown-toggle btn-block" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Genres
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><input type="checkbox" />Apple </li>
+                    <li><input type="checkbox" />Orange</li>
+                    <li><input type="checkbox" />Grapes </li>
+                    <li><input type="checkbox" />Berry </li>
+                    <li><input type="checkbox" />Mango </li>
+                    <li><input type="checkbox" />Banana </li>
+                    <li><input type="checkbox" />Tomato</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <label class="btn btn-secondary active">
+                <i class="fa fa-heart"></i>
+                <input type="checkbox" autocomplete="off"> Only friends' events
+            </label>
+        </div>
+
+        <div class="row list-group">
+            <form class="navbar-form navbar-fill" role="search">
+                <div class="form-group">
+                    <i class="fa fa-film"></i><input type="text" class="form-control" placeholder="IMDB-ID / Title">
+                </div>
+            </form>
+        </div>
+
+        <div class="row list-group">
+            <form class="navbar-form navbar-fill" role="search">
+                <div class="form-group">
+                    <i class="fa fa-search"></i><input type="text" class="form-control" placeholder="Event name">
+                </div>
+            </form>
+        </div>
+
+        <!--div class="row">
+            <i class="fa fa-clock-o"></i>
+            <div class="well">
+                <div id="datetimepicker1" class="input-append date">
+                    <input data-format="dd/MM/yyyy hh:mm:ss" type="text"/>
+                    <span class="add-on">
+                      <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+                    </span>
+                </div>
+            </div>
+            <script type="text/javascript">
+                console.log("WTF");
+                $(function() {
+                    $('#datetimepicker1').datetimepicker({
+                        language: 'pt-BR'
+                    });
+                });
+            </script>
+        </div-->
+
     </div>
 </div>

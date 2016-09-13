@@ -50,6 +50,9 @@ module.exports.getEvent = function(req, res, next) {
             return next(err);
         }
 
+        event.host.salt = '';
+        event.host.hash = '';
+
         res.json(event);
     });
 };
