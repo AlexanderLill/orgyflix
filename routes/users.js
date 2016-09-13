@@ -8,14 +8,6 @@ var auth = jwt({secret: 'SECRET', userProperty: 'payload'});
 
 var userController = require('../controllers/UserController');
 
-/*router.get('/:user/invitations', auth, function(req, res, next) {
-  //TODO: implement
-});
-
-router.get('/:user', auth, function(req, res, next) {
-
-});*/
-
 //Registration & Login
 router.post('/register', userController.registerUser);
 
@@ -38,14 +30,22 @@ router.param('user', function(req, res, next, id) {
     });
 });
 
-//Getting Single User
+//User specific APIs
 router.get('/', auth, userController.getUsers);
 
 router.get('/:user', auth, function(req, res, next) {
     res.json(req.user);
 });
 
-//router.get('/:user', userController.login);
+router.put('/:user/friends', userController.addFriend);
+
+/*router.get('/:user/invitations', auth, function(req, res, next) {
+ //TODO: implement
+ });
+
+ router.get('/:user', auth, function(req, res, next) {
+
+ });*/
 
 /*
   router.put('/:id/invitations'

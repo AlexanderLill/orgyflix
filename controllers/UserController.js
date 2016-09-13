@@ -9,17 +9,29 @@ module.exports.registerUser = function(req, res, next) {
         return res.status(400).json({message: "Please fill out all fields"});
     }
 
-    var user = new User();
-    user.username = req.body.username;
-    user.setPassword(req.body.password);
-    user.firstname = req.body.firstname;
-    user.lastname = req.body.lastname;
+    //Checking if user already exists
+    var query = User.findOne({'username' : req.body.username});
 
-    user.save(function (err) {
+    query.exec(function (err, user){
         if (err) {
             return next(err);
         }
-        return res.json({token: user.generateJWT()})
+        if (user) {
+            return next(new Error("user already exists"));
+        }
+
+        var newUser = new User();
+        newUser.username = req.body.username;
+        newUser.setPassword(req.body.password);
+        newUser.firstname = req.body.firstname;
+        newUser.lastname = req.body.lastname;
+
+        newUser.save(function (err) {
+            if (err) {
+                return next(err);
+            }
+            return res.json({token: newUser.generateJWT()})
+        });
     });
 };
 
@@ -48,4 +60,12 @@ module.exports.getUsers = function(req, res, next) {
 
         res.json(users);
     });
+};
+
+module.exports.addFriend = function(req, res, next) {
+    if (!req.body.friend) {
+        return res.status(400).json({message: "No friend id was given"});
+    }
+
+    //var query = User.findById(req.body.friend);
 };
