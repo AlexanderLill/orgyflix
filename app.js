@@ -11,7 +11,6 @@ var mongoose = require('mongoose');
 var passport = require('passport');
 require('./models/Invitation.js');
 require('./models/User.js');
-require('./models/Movie.js');
 require('./models/Event.js');
 mongoose.connect('mongodb://localhost/orgyflix');
 
