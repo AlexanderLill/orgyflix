@@ -1,7 +1,12 @@
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './index';
 
 @NgModule({
+    imports: [
+        BrowserModule, FormsModule
+    ],
     declarations: [
         LoginComponent
     ],
@@ -9,5 +14,6 @@ import { LoginComponent } from './index';
         LoginComponent
     ]
 })
+
 export class LoginModule {
 }
