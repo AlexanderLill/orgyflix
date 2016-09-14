@@ -6,4 +6,13 @@ import { Component } from '@angular/core';
 })
 
 export class OverviewComponent {
+    public sidebarHidden: Boolean;
+
+    constructor() {
+        this.sidebarHidden = true;
+    }
+
+    toggleSidebar() {
+        this.sidebarHidden = !this.sidebarHidden;
+    }
 }
