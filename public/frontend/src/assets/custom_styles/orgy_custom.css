@@ -17,6 +17,10 @@ body {
     height: auto;
 }
 
+.card-body {
+    text-align: center;
+}
+
 nav a {
     text-decoration: none !important;
 }
@@ -34,6 +38,10 @@ nav ul li a {
 }
 
 nav ul li a {
+    text-decoration: none !important;
+}
+
+a {
     text-decoration: none !important;
 }
 
