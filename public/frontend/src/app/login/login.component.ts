@@ -8,11 +8,10 @@ import { Router } from '@angular/router';
     templateUrl: 'app/login/login.html',
 })
 export class LoginComponent {
-    public user: User       = new User('', '');
+    public user: User       = new User();
     public errorMsg: String = '';
 
-    constructor(private router: Router) {
-    }
+    constructor(private router: Router) {}
 
     login() {
         if (!this.user.username || !this.user.password) {
