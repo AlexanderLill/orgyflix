@@ -48,11 +48,11 @@ router.put('/:user/friends', userController.addFriend);
  });*/
 
 /*
-  router.put('/:id/invitations'
-  router.get('/:id'
+  router.put('/:_id/invitations'
+  router.get('/:_id'
   router.post('/'
   router.get('/'
-  router.put(':id/friends'
+  router.put(':_id/friends'
  */
 
 module.exports = router;

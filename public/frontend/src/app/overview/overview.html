@@ -6,7 +6,7 @@
 
 
 
-<!--<div class="btn-group pull-right" role="group" aria-label="...">
+<div class="btn-group pull-right" role="group" aria-label="...">
     <button type="button" class="btn btn-default"><i class="fa fa-plus"></i></button>
     <button (click)="toggleSidebar()" type="button" class="btn btn-default"><i class="fa fa-filter"></i></button>
 </div>
@@ -91,11 +91,35 @@
             </form>
         </div>
 
+        <!--div class="row">
+            <i class="fa fa-clock-o"></i>
+            <div class="well">
+                <div _id="datetimepicker1" class="input-append date">
+                    <input data-format="dd/MM/yyyy hh:mm:ss" type="text"/>
+                    <span class="add-on">
+                      <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+                    </span>
+                </div>
+            </div>
+            <script type="text/javascript">
+                console.log("WTF");
+                $(function() {
+                    $('#datetimepicker1').datetimepicker({
+                        language: 'pt-BR'
+                    });
+                });
+            </script>
+        </div-->
+
     </div>
 </div>
 
-<ul>
-    <li *ngFor="let event of events">
-        <span>{{event.name}}</span> {{event.movie}}
-    </li>
-</ul>-->
+<div class="container">
+    <div class="row">
+        <div *ngFor="let event of events">
+            <div class="col s4">
+                <eventcard [event]="event"></eventcard>
+            </div>
+        </div>
+    </div>
+</div>

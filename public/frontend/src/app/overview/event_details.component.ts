@@ -19,7 +19,7 @@ export class EventDetailsComponent implements OnInit, OnDestroy  {
 
     ngOnInit() {
         this.sub = this.route.params.subscribe(params => {
-            let id = +params['id']; // (+) converts string 'id' to a number
+            let id = +params['_id']; // (+) converts string '_id' to a number
             this.service.getEvent(id).subscribe(result => this.event = result, error => this.event = null);
         });
     }

@@ -59,7 +59,7 @@ module.exports.getEvent = function(req, res, next) {
 
 module.exports.joinEvent = function(req, res, next) {
 
-    //TODO: Get user id
+    //TODO: Get user _id
     //TODO: Test
     var user = new User();
 

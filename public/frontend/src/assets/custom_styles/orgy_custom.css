@@ -2,9 +2,19 @@ body {
     background-image: url("/src/assets/images/movie_background.jpg");
 }
 
+.text-medium {
+    font-size: 13pt;
+}
+
 .text-bigger {
     font-size: 14pt;
     font-weight: bold;
+}
+
+.cardimg {
+    max-height: 205px;
+    width: auto !important;
+    height: auto;
 }
 
 nav a {

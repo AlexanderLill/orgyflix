@@ -64,7 +64,7 @@ module.exports.getUsers = function(req, res, next) {
 
 module.exports.addFriend = function(req, res, next) {
     if (!req.body.friend) {
-        return res.status(400).json({message: "No friend id was given"});
+        return res.status(400).json({message: "No friend _id was given"});
     }
 
     var query = User.findById(req.body.friend);

@@ -5,7 +5,7 @@ import { Router } from "@angular/router";
 
 @Component({
     selector: 'as-overview',
-    templateUrl: 'app/overview/overview.html',
+    templateUrl: 'app/overview/overview.html'
 })
 
 export class OverviewComponent implements OnInit {
@@ -25,6 +25,6 @@ export class OverviewComponent implements OnInit {
     }
 
     selectEvent(event: Event) {
-        this.router.navigate(['/events', event.id]);
+        this.router.navigate(['/events', event._id]);
     }
 }

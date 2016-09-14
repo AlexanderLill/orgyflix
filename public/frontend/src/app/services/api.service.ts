@@ -35,7 +35,8 @@ export class ApiService {
         return request.map(ApiService.handleResponse(Event));
     };
 
-    getEvent(evtId: number | string): Observable<Event> {
+    getEvent(evtId: string): Observable<Event> {
+        console.log(evtId);
         let request = this.http.get(this.url+'events/'+evtId);
         return request.map(ApiService.handleResponse(Event, true));
     }
