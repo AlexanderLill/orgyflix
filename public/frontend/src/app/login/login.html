@@ -1,25 +1,25 @@
 <div class="row">
-    <h2 class="text-center">Login to OrgyFlix</h2>
+    <h2 class="text-center white-text">Login to OrgyFlix</h2>
 </div>
 <br>
 
 <div class="panel-primary">
     <div class="form-group">
-        <label for="username">Username (email address)</label>
+        <label class="grey-text text-lighten-4" for="username">Username (email address)</label>
         <input [(ngModel)]="user.username"
-               type="email" class="form-control"
+               type="email" class="form-control grey-text text-lighten-2"
                id="username" placeholder="Email">
     </div>
     <div class="form-group">
-        <label for="password">Password</label>
+        <label class="grey-text text-lighten-4" for="password">Password</label>
         <input [(ngModel)]="user.password"
-               type="password" class="form-control"
+               type="password" class="form-control grey-text text-lighten-2"
                id="password" placeholder="Password">
     </div>
 
-    <div class="form-group"><span class="text-center text-danger">{{errorMsg}}</span></div>
+    <div class="form-group"><span class="text-center red-text text-accent-4 text-bigger">{{errorMsg}}</span></div>
     <button (click)="login()"
-            class="btn btn-primary" style="width: 100%"
+            class="waves-effect waves-light btn" style="width: 100%"
             type="submit" name="action">Login
     </button>
 </div>
