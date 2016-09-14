@@ -3,21 +3,25 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { OverviewComponent } from './index';
 import { ApiService } from "../services/api.service";
+import { EventDetailsComponent } from "./event_details.component";
 
 @NgModule({
     declarations: [
-        OverviewComponent
+        OverviewComponent,
+        EventDetailsComponent
     ],
     imports: [
         FormsModule,
-        BrowserModule
+        BrowserModule,
     ],
     exports: [
-        OverviewComponent
+        OverviewComponent,
+        EventDetailsComponent
     ],
     providers: [
         ApiService
     ]
 })
+
 export class OverviewModule {
 }

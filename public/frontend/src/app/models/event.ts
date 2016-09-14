@@ -1,6 +1,7 @@
 import { User } from "./user";
 
 export class Event {
+    id: string;
     name: string;
     movie: string;
     type: number;

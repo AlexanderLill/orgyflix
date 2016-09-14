@@ -15,6 +15,10 @@ nav a:hover {
     color: white;
 }
 
+nav a:visited {
+    color: white;
+}
+
 nav ul li a {
     background-color: black;
 }
@@ -26,6 +30,10 @@ nav ul li a {
 nav ul li a:hover {
     color: white;
     background-color: #606060;
+}
+
+nav ul li a:visited {
+    color: white;
 }
 
 nav ul li:hover {

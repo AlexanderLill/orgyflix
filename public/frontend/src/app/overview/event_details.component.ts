@@ -2,11 +2,11 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Event } from '../models/event';
 import { ApiService } from "../services/api.service";
-import {Subscription} from "rxjs";
+import { Subscription } from "rxjs";
 
 @Component({
     selector: 'event-details',
-    templateUrl: 'app/event_details/event_details.html',
+    templateUrl: 'app/overview/event_details.html',
 })
 export class EventDetailsComponent implements OnInit, OnDestroy  {
     public event: Event;
@@ -28,6 +28,6 @@ export class EventDetailsComponent implements OnInit, OnDestroy  {
     }
 
     gotToEvents() {
-        this.router.navigate(['../overview']);
+        this.router.navigate(['/overview']);
     }
 }

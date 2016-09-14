@@ -6,6 +6,7 @@ import { Event } from '../models/event';
 
 @Injectable()
 export class ApiService {
+    private url = 'http://localhost:3000/';
 
     private static handleResponse(Type: any, expectSingle = false) {
         return function (response: Response) {
@@ -30,7 +31,12 @@ export class ApiService {
     }
 
     getAllEvents(): Observable<Event[]> {
-        let request = this.http.get('http://localhost:3000/events');
+        let request = this.http.get(this.url+'events');
         return request.map(ApiService.handleResponse(Event));
     };
+
+    getEvent(evtId: number | string): Observable<Event> {
+        let request = this.http.get(this.url+'events/'+evtId);
+        return request.map(ApiService.handleResponse(Event, true));
+    }
 }
