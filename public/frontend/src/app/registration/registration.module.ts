@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { overviewRouting } from '../overview/overview.routes';
 import { RegistrationComponent } from './index';
 
 @NgModule({
@@ -11,7 +12,7 @@ import { RegistrationComponent } from './index';
         RegistrationComponent
     ],
     imports: [
-        BrowserModule, FormsModule
+        BrowserModule, FormsModule, overviewRouting
     ]
 })
 

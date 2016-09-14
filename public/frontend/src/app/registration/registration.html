@@ -1,27 +1,46 @@
-<div class="container" >
-    <div class="title">
-        Register to OrgyFlix
+<div class="container col-md-6 col-md-offset-3" >
+    <div class="row">
+        <h2 class="text-center">Insert your personal data to register on OrgyFlix</h2>
     </div>
-    <div class="panel-body center-block">
-        <div class="row">
-            <div class="input-field col s12">
-                <input id="username"
-                       type="email" class="validate">
-                <label for="username">Username</label>
-            </div>
+    <br>
+
+    <div class="panel-primary">
+        <div class="form-group">
+            <label for="firstname">First name</label>
+            <input [(ngModel)]="user.firstname"
+                   type="text" class="form-control"
+                   id="firstname" placeholder="John">
+        </div>
+        <div class="form-group">
+            <label for="lastname">Last name</label>
+            <input [(ngModel)]="user.lastname"
+                   type="text" class="form-control"
+                   id="lastname" placeholder="Doe">
+        </div>
+        <div class="form-group">
+            <label for="username">Email address (this will be your username)</label>
+            <input [(ngModel)]="user.username"
+                   type="email" class="form-control"
+                   id="username" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input [(ngModel)]="user.password"
+                   type="password" class="form-control"
+                   id="password" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <label for="passwordRepeat">Repeat password</label>
+            <input [(ngModel)]="repeatPassword"
+                   type="password" class="form-control"
+                   id="passwordRepeat" placeholder="Password">
         </div>
 
-        <div class="row">
-            <div class="input-field col s12">
-                <input id="password"
-                       type="password" class="validate">
-                <label for="password">Password</label>
-            </div>
-        </div>
-
-        <span>{{errorMsg}}</span>
-        <button
-                class="btn"
-                type="submit" name="action">Register</button>
+        <div class="form-group"><span class="text-center text-danger">{{errorMsg}}</span></div>
+        <button (click)="register()"
+                class="btn btn-danger" style="width: 100%"
+                type="submit" name="action">Register
+        </button>
     </div>
+
 </div>
