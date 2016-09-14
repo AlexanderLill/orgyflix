@@ -53,6 +53,7 @@
     "gulp-typescript": "~2.13.6",
     "gulp-uglify": "~2.0.0",
     "gulp-useref": "~3.1.2",
+    "http": "0.0.0",
     "jquery": "^3.1.0",
     "lodash": "^4.15.0",
     "phantomjs-prebuilt": "^2.1.12",

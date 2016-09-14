@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var cors = require('cors');
 
 var app = express();
 
@@ -16,6 +17,8 @@ mongoose.connect('mongodb://localhost/orgyflix');
 
 require('./models/User');
 require('./config/passport');
+
+app.use(cors());
 
 var routes = require('./routes/index');
 var events = require('./routes/events');
