@@ -43,4 +43,11 @@ UserSchema.methods.addInvitation = function(invitation, cb) {
     this.save(cb);
 };
 
+UserSchema.methods.addFriend = function(friend, cb) {
+    if (!this.friends.contains(friend)) {
+        this.friends.push(friend);
+        this.save(cb);
+    }
+};
+
 mongoose.model('User', UserSchema);

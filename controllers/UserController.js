@@ -67,5 +67,20 @@ module.exports.addFriend = function(req, res, next) {
         return res.status(400).json({message: "No friend id was given"});
     }
 
-    //var query = User.findById(req.body.friend);
+    var query = User.findById(req.body.friend);
+    query.exec(function(err, friend) {
+        if (err) {
+            return next(err);
+        }
+        if (!friend) {
+            return next(new Error("Specified user does not exist"));
+        }
+
+        req.user.addFriend(friend, function(err) {
+            if (err) {
+                return next(err);
+            }
+            return res.json(req.user);
+        });
+    });
 };
