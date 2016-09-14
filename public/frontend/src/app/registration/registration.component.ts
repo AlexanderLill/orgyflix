@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { User } from "../login/user.model";
 import { Router } from "@angular/router";
+import { User } from "../models/user";
 
 @Component({
     selector: 'as-registration',

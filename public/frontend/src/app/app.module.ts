@@ -7,6 +7,8 @@ import { NavbarModule } from './shared';
 import { HomeModule } from './home/home.module';
 import { OverviewModule } from './overview/overview.module';
 import { TodolistModule } from './todolist/todolist.module';
+import { HttpModule } from "@angular/http";
+import 'rxjs/add/operator/map';
 
 @NgModule({
     declarations: [
@@ -17,6 +19,7 @@ import { TodolistModule } from './todolist/todolist.module';
         HomeModule,
         OverviewModule,
         TodolistModule,
+        HttpModule,
         routing
     ],
     providers: [ APP_PROVIDERS, appRoutingProviders ],
